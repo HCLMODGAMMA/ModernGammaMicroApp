@@ -1,0 +1,15 @@
+com\mot\gamma\entiry\Login.class
+com\mot\gamma\exception\MotGammaException.class
+com\mot\gamma\util\MotGammaResponse.class
+com\mot\gamma\MotGammaApplication.class
+com\mot\gamma\repository\CaseDetailsRepository.class
+com\mot\gamma\entiry\Sites.class
+com\mot\gamma\entiry\ContactDetails.class
+com\mot\gamma\exception\MotGammaNotFoundException.class
+com\mot\gamma\entiry\CaseStatus.class
+com\mot\gamma\controller\TestController.class
+com\mot\gamma\controller\MotGammaController.class
+com\mot\gamma\services\MotGrammaService.class
+com\mot\gamma\entiry\CaseDetails.class
+com\mot\gamma\exception\MotGammaExceptionHandler.class
+com\mot\gamma\util\ResponseStatus.class
