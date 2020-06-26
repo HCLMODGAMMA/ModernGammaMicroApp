@@ -3,9 +3,11 @@ package com.mot.gamma.services;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.mot.gamma.entiry.CaseDetails;
 import com.mot.gamma.entiry.Login;
@@ -37,7 +39,7 @@ public class MotGrammaService {
 		String pw=loginMap.get(login.getUserName().toLowerCase());
 		if(null != pw && pw.equalsIgnoreCase(login.getPassword())) {			
 			responseStatus.setCode(200);
-			responseStatus.setStatus("success");
+			responseStatus.setStatus("Success");
 			responseStatus.setMessage("Login successful");
 			responseStatus.setToken("qwertyuiopasdfghjklzxcvbnm123456");		
 		}else
@@ -61,10 +63,14 @@ public class MotGrammaService {
 		}
 	}		
 	
+	@Transactional
 	public CaseDetails saveSubmitCase(CaseDetails caseDetails)   
 	{  
 		//System.out.println(" Controller caseDetails.getCsmNo() :"+caseDetails.getCsmNo());
 		CaseDetails caseDetailsRes = new CaseDetails();
+		Random random = new Random();
+		caseDetails.setCsmNo(1233411 + Math.abs(random.nextInt()));
+		caseDetails.setCaseSubmissionNo("BXD2020122"  +  Math.abs(random.nextInt()));
 		caseDetailsRes = motGrammaRepository.save(caseDetails);		
 		return caseDetailsRes; 
 	}

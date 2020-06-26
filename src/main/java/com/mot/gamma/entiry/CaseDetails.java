@@ -15,12 +15,10 @@ public class CaseDetails {
 
 	public CaseDetails() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	@Id
-	@Column(name = "CSM_NO", nullable = false, updatable = false, insertable = false)
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "CSM_NO", nullable = false)
 	private int csmNo;
 
 	@Column(name = "CASE_SUBMISSION_NO")

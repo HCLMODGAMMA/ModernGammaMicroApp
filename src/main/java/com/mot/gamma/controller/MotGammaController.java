@@ -46,7 +46,7 @@ public class MotGammaController {
 		caseDetailsList = motGrammaService.getListCases();
 		if (null != caseDetailsList) {
 			responseStatus.setCode(200);
-			responseStatus.setStatus("success");
+			responseStatus.setStatus("Success");
 			responseStatus.setMessage("Retrive successful");
 			responseStatus.setResult(caseDetailsList);
 			return new ResponseEntity<Object>(caseDetailsList, HttpStatus.OK);
@@ -67,7 +67,7 @@ public class MotGammaController {
 		motGrammaService.saveSubmitCase(caseDetails);
 
 		ResponseStatus responseUtil = new ResponseStatus();
-		responseUtil.setStatus("success");
+		responseUtil.setStatus("Success");
 		responseUtil.setCode(200);
 		responseUtil.setMessage("Saved successful");
 		return new ResponseEntity<Object>(responseUtil, HttpStatus.OK);
@@ -83,7 +83,7 @@ public class MotGammaController {
 
 		if (null != caseDetails) {
 			responseStatus.setCode(200);
-			responseStatus.setStatus("success");
+			responseStatus.setStatus("Success");
 			responseStatus.setMessage("Retrive successful");
 			responseStatus.setResult(caseDetails);
 			return new ResponseEntity<Object>(caseDetails, HttpStatus.OK);
