@@ -40,7 +40,7 @@ public class MotGrammaService {
 		if(null != pw && pw.equalsIgnoreCase(login.getPassword())) {			
 			responseStatus.setCode(200);
 			responseStatus.setStatus("Success");
-			responseStatus.setMessage("Login successful");
+			responseStatus.setMessage("Login Successful");
 			responseStatus.setToken("qwertyuiopasdfghjklzxcvbnm123456");		
 		}else
 		{		
